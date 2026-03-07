@@ -27,3 +27,9 @@ h1 {
     padding-bottom: 30px;
     font-size: 40px;
 }
+.topicsContainer-gallery p{
+    text-align: center;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bolder;
+}

@@ -76,6 +76,7 @@ h3{
 }
 p{
     font-size: 18px;
+    line-height: 1.8;
 }
 .welcomeMessage p{
     text-align: justify;

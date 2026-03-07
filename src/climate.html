@@ -6,7 +6,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style_gallery.css">
-        <title>Gallery</title>
+        <link rel="stylesheet" href="style_climate.css">
+         <script
+            src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+        <title>Climate</title>
     </head>
     <main>
         <!-- Navigation Bar -->
@@ -36,29 +41,56 @@
 
        <!-- main content section -->
         
-        <section class="mainContent-gallery">
-            <h1>Image Gallery</h1>
-            <!-- images section -->
-            <div class ="topicsContainer-gallery">
-                <div><img src="utilities/climate_monitor.jpg" alt="Climate Monitor" class="topic_images-gallery" id="climat-gallery">
-                    <p>Climate</p>
+        <section class="mainContent-climate">
+            <h1>Climate</h1>
+            <p>
+                AI sensors in the greenhouse collect data to help control the climate, such as light levels, temperature, humidity, and CO₂ (carbon dioxide) concentration.
+                These data are extracted and transformed to help people understand and make decisions about how to control the greenhouse's climate, which helps plants grow better and use resources more efficiently.
+               <br><br>
+                The following reading simulates the transformation and reporting of a good and a bad dataset to the dashboard for use. The bad data extracted was due to a faulty sensor with a <strong> 5% positive deviation</strong> from the good data.
+                The inconsistency in the bad data will affect the accuracy of the dashboard reports.
+            </p>
+            <!-- climate section -->
+            <div class ="climate-container">
+                <div class="climate-chart">
+                    <canvas id="myChart-humidity" style="width:100%;max-width:600px"></canvas>
+                    <h2>Humidity</h2>
                 </div>
-                <div><img src="utilities/moisture_image.jpg" alt="Irrigation Monitor" class="topic_images-gallery" id="irr-gallery">
-                <p>Irrigation</p>
+                <div class="climate-chart">
+                    <canvas id="myChart-temp" style="width:100%;max-width:600px"></canvas>
+                   <h2>Temperature</h2> 
                 </div>
-                <div><img src="utilities/diseases_image2.jpg" alt="infected plants" class="topic_images-gallery" id="pest-gallery">
-                <p>Pests & Diseases</p>
+                <div class="climate-chart">
+                    <canvas id="myChart-light" style="width:100%;max-width:600px"></canvas>
+                    <h2>Ilumination</h2>
                 </div>
-                <div><img src="utilities/nutrient_image.jpg" alt="Nutrients tracker" class="topic_images-gallery" id="nutri-gallery">
-                <p>Nutrients</p>
+                <div class="climate-chart">
+                    <canvas id="myChart-wind" style="width:100%;max-width:600px"></canvas>
+                    <h2>Carbon Dioxide</h2>
                 </div>
-                <div><img src="utilities/yield_forecast_image.jpg" alt="Yield Forecasting dashboard" class="topic_images-gallery" id="yield-gallery">
-                <p>Yield Forecasting</p>
-                </div>
+            </div>
+            <h2 class="sub-heading">Impact</h2>
+            <ul>
+                <li>Inaccurate readings can lead to decisions that threaten crop health and cause financial instability.</li>
+                <li>
+                    Farmers may lose trust in the automated process and revert back to the manual processes.
+                </li>
+                <li>
+                    The unrealistic data can cause a waste of resources, as poor data can lead to unnecessary heating.
+                </li>
+                <li>The unrealistic data can cause a waste of resources, as poor data can lead to unnecessary heating.</li>
+                <li>Poor humidity or temperature readings can lead to too much heat, which can destroy the crops and affect the entire harvest.</li>
+                <li>Troubleshooting the sensors and initiating recalibration can mitigate the negative impact.</li>
+                <li>Farmers are investing in tools or services that offer cleaner, better, and more reliable greenhouse climate algorithms</li>
+            </ul>
+            
+            <!--Article button-->
+            <div>
+                 <input type="button" value="Article" id="climate-article" class="articleBtn">
             </div>
         </section>
 
-         <!-- footer section -->
+        <!-- footer section -->
         <footer>
             <div class="footerContent">
                 <table class="footerTable">
@@ -137,5 +169,6 @@
 
         <!-- javascript section -->
         <script src="script.js"></script>
+         <script  type="module" src="climate.js"></script>
     </main>
 </html>

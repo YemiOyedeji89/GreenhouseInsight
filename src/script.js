@@ -133,3 +133,10 @@ chatForm.addEventListener('submit', function(e) {
         chatUsBtn.style.display="block";
     }
 });
+
+/// Topics learn more buttons
+const learnMoreBtn = document.querySelectorAll('.learnMoreBtn');
+learnMoreBtn.forEach(btn => { btn.addEventListener('click', function(){
+    const url = this.getAttribute('data-url');
+    window.location.href = url;
+} )});

@@ -6,7 +6,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="style_gallery.css">
-        <title>Gallery</title>
+        <link rel="stylesheet" href="style_climate.css">
+        <link rel="stylesheet" href="style_irrigation.css">
+         <script
+            src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+        <title>Irrigation</title>
     </head>
     <main>
         <!-- Navigation Bar -->
@@ -36,29 +42,56 @@
 
        <!-- main content section -->
         
-        <section class="mainContent-gallery">
-            <h1>Image Gallery</h1>
-            <!-- images section -->
-            <div class ="topicsContainer-gallery">
-                <div><img src="utilities/climate_monitor.jpg" alt="Climate Monitor" class="topic_images-gallery" id="climat-gallery">
-                    <p>Climate</p>
+        <section class="mainContent-climate">
+            <h1>Irrigation</h1>
+            <!-- irrigation section -->
+            <div class ="climate-container">
+                <div class="climate-chart">
+                    <video width="100%" autoplay muted loop playsinline>
+                        <source src="utilities/irrigation.mp4" type="video/mp4">
+                    </video>
                 </div>
-                <div><img src="utilities/moisture_image.jpg" alt="Irrigation Monitor" class="topic_images-gallery" id="irr-gallery">
-                <p>Irrigation</p>
+                <!--line chart-->
+                <div class="climate-chart">
+                    <canvas id="myChart-irrData" style="width:100%;max-width:600px"></canvas>
                 </div>
-                <div><img src="utilities/diseases_image2.jpg" alt="infected plants" class="topic_images-gallery" id="pest-gallery">
-                <p>Pests & Diseases</p>
+                <!--pie chart-->
+                <div class="climate-chart" id="pie-chart-container">
+                     <canvas id="myChart-irrCum" style="width:100%;max-width:600px"></canvas>
+                    
                 </div>
-                <div><img src="utilities/nutrient_image.jpg" alt="Nutrients tracker" class="topic_images-gallery" id="nutri-gallery">
-                <p>Nutrients</p>
+                <div class="climate-chart">
+                    <img src="utilities/moisture_image.jpg" alt="Irrigation Monitor" class="topic_img" id="irr-pg">
                 </div>
-                <div><img src="utilities/yield_forecast_image.jpg" alt="Yield Forecasting dashboard" class="topic_images-gallery" id="yield-gallery">
-                <p>Yield Forecasting</p>
-                </div>
+            </div>
+            <p>
+                There is a significant risk to the business if an error happens in the greenhouse sensors. 
+                Greenhouse AI automated systems rely heavily on the accuracy of sensor data to make real-time decisions about irrigation.
+                This 5% error over a full year will impact the following:
+            </p>
+            <div>
+                <h2 class="sub-heading">Impact on the Greenhouse AI System</h2>
+                    <ul>
+                        <li>The AI system may provide a false optimal level for irrigation, which can result in water wastage, as shown in the cumulative water wastage.
+                        <li>
+                           It can lead to over-saturation of the root, which can affect the root's oxygen deprivation and cause fungal diseases.
+                        </li>
+                        <li>
+                             Future prediction becomes inaccurate.
+                        </li>
+                    </ul>
+            </div>
+            <div class="irr-youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ksk-VrY1x-E?si=ODGgZLG3v2u2DtS9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3 id="irri-video">Source Irrigation Control</h3>
+            </div>
+            <!--Article button-->
+            <div>
+                 <input type="button" value="Article" id="irr-article" class="articleBtn">
             </div>
         </section>
 
-         <!-- footer section -->
+        <!-- footer section -->
         <footer>
             <div class="footerContent">
                 <table class="footerTable">
@@ -134,8 +167,8 @@
         <div class="chatbot-container">
             <button id="chat-us-btn" title="chat">Chat with us!</button>
         </div>
-
         <!-- javascript section -->
         <script src="script.js"></script>
+        <script  type="module" src="irrigation.js"></script>
     </main>
 </html>
