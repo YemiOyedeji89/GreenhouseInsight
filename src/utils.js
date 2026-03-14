@@ -60,8 +60,36 @@ async function loadCSV(filePath) {
   });
 }
 
+// Filtering by crop name
+function filterByCrop(data, cropName) {
+  return data.filter(row => row.Crop.toLowerCase() === cropName.toLowerCase());
+}
+
+// Calculating Average Yield per Greenhouse Zone taking an array
+function getZoneAverages(filteredData) {
+  const zoneTotals = {}; 
+
+  filteredData.forEach(row => {
+    const zone = row.Region; // as using the region as greenhouse zone
+    const yieldVal = parseFloat(row.Yield_ton_per_ha);
+
+    if (!zoneTotals[zone]) {
+        zoneTotals[zone] = { sum: 0, count: 0 };
+    }
+    zoneTotals[zone].sum += yieldVal;
+    zoneTotals[zone].count += 1;
+  });
+
+  const labels = Object.keys(zoneTotals).sort(); 
+  const averages = labels.map(zt => (zoneTotals[zt].sum / zoneTotals[zt].count).toFixed(2));
+
+  return { labels, averages };
+}
+
 export default {
     calculateMonthlyAverages,
     loadCSV,
-    readCSVToJson
+    readCSVToJson,
+    filterByCrop,
+    getZoneAverages
 };

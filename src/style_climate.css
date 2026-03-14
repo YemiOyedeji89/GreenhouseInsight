@@ -12,8 +12,9 @@ background-color: #d0d5cb;
     flex-wrap: wrap;/* to allows items to drop to the next row */
     gap: 20px;
     justify-content: center;
-    margin-left: 20px;
-     margin-right: 20px;
+    margin-left: 30px;
+     margin-right: 100px;
+     object-fit: cover;
     
 }
 .climate-container div{

@@ -3,6 +3,7 @@ const optimalbtn = document.getElementById('optimal-level');
 const errorBtn = document.getElementById('error-inject');
 const idealEC = 1.6, idealPH= 6.0;
 const nutriArtcle= document.getElementById('nuti-article');
+const clearLogBtn = document.getElementById('clear-log');
 
 //event listiner
 optimalbtn.addEventListener('click', function(event) {
@@ -13,6 +14,13 @@ optimalbtn.addEventListener('click', function(event) {
 errorBtn.addEventListener('click', function(event) {
     event.preventDefault(); /// prevent page refresh on click refresh
    simulateDrift();
+});
+
+clearLogBtn.addEventListener('click', function(event) {
+    event.preventDefault(); /// prevent page refresh on click refresh
+   clearLogs();
+   
+
 });
 
 //Article button
@@ -72,4 +80,11 @@ function simulateDrift() {
     document.getElementById('statusLabel').style.color = "#d62728";
     addLog("CRITICAL ERROR: Sensor drift detected (5%).", "#ff4444");
     addLog("DANGER: EC exceeds 2.5mS/cm. Root toxicity possible.", "#ff4444");
+}
+
+//clear logs
+function clearLogs() {
+    const logContainer = document.getElementById('audit-log');
+    logContainer.innerHTML = '';
+    addLog("LOGS CLEARED: SYSTEM INITIALIZED... WAITING FOR SENSOR DATA....", "#189420");
 }
