@@ -186,7 +186,7 @@ footer p {
     transform: scale(1.20);
     transition: transform 0.4s ease;
 }
-.learnMoreBtn {
+.learnMoreBtn, .btn-opt, .btn-reset {
     padding: 10px 20px;
     background-color: #8DC957;
     color: rgb(16, 16, 16);
