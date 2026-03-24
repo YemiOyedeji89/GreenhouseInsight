@@ -104,7 +104,7 @@ chatForm.addEventListener('submit', function(e) {
 
     // Checks Name field
     if (!nameValid) {
-        displayFieldErrorMsg(errorAlertDiv, "Please enter text only firstname and lastname!");
+        displayFieldErrorMsg(errorAlertDiv, "Please enter text only firstname and lastname (e.g., John Doe)");
         isFormReady = false; 
     } else {
         clearErrorMsgLogic(errorAlertDiv); // Clear error if fixed

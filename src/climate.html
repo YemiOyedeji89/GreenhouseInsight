@@ -4,9 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="style_gallery.css">
-        <link rel="stylesheet" href="style_climate.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="./styles/style_gallery.css">
+        <link rel="stylesheet" href="./styles/style_climate.css">
          <script
             src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0">
         </script>
@@ -143,13 +143,13 @@
                     <strong>⚠️ Disclaimer:</strong> This is a test environment. Please do not use real personal data. 
                     All session data is cleared on exit.
                 </div>
-                <label for="name" class="chat-form-area">Name:</label>
+                <label for="name" class="chat-form-area">Name <span class="word-highlight"> * </span></label>
                 <input type="text" id="name" name="name">
                 <div id="error-alert" class="error-alert-field" hidden="true" style="display: none;"></div>
-                <label for="email" class="chat-form-area">Email:</label>
+                <label for="email" class="chat-form-area">Email <span class="word-highlight"> * </span></label>
                 <input type="email" id="email" name="email">
                 <div id="error-alert-email" class="error-alert-field" hidden="true" style="display: none;"></div>
-                <label for="message" class="chat-form-area">Message:</label>
+                <label for="message" class="chat-form-area">Message <span class="word-highlight"> * </span></label>
                 <textarea id="message" class="chat-form-area" name="message" ></textarea>
                 <div id="error-alert-message" class="error-alert-field" hidden="true" style="display: none;"></div>
                 <button type="submit" id="submit-chat-btn" class="chat-form-areabtn">Submit</button>
@@ -168,7 +168,7 @@
         </div>
 
         <!-- javascript section -->
-        <script src="script.js"></script>
-         <script  type="module" src="climate.js"></script>
+        <script src="./script_Pages/script.js"></script>
+         <script  type="module" src="./script_Pages/climate.js"></script>
     </main>
 </html>

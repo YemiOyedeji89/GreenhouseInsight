@@ -1,0 +1,44 @@
+{
+  "name": "greenhouseinsight",
+  "version": "1.0.0",
+  "description": "This is for a project that tells people why good data is important in smart greenhouse Artificial Intelligence systems.",
+  "main": "homePage.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:report": "node --experimental-vm-modules node_modules/jest/bin/jest.js --reporters=default --reporters=jest-html-reporter"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YemiOyedeji89/GreenhouseInsight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YemiOyedeji89/GreenhouseInsight/issues"
+  },
+  "homepage": "https://github.com/YemiOyedeji89/GreenhouseInsight#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "jest-html-reporter": "^4.3.0"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporter",
+        {
+          "pageTitle": "Greenhouse Insight Tests",
+          "outputPath": "./testResults/test-report.html",
+          "includeFailureMsg": true,
+          "darkTheme": true
+        }
+      ]
+    ],
+    "testEnvironment": "jsdom"
+  }
+}

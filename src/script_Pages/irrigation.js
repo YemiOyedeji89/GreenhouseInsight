@@ -1,5 +1,5 @@
 
-import MyUtils from './utils.js';
+import MyUtils from './utils.js'
 Chart.register(ChartDataLabels); ///registering the label to be visible on the chart
 const { loadCSV, readCSVToJson } = MyUtils;
 const irriCumData = "./utilities/cumulative_waste.csv";
