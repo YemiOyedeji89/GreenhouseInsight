@@ -7,3 +7,5 @@ node_modules/
 /playwright/.cache/
 /playwright/.auth/
 /tests/
+/test-Results/
+/utilities/irrigation.mp4/
