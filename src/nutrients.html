@@ -29,11 +29,11 @@
                     <div>
                         <select class="topicsBar" id="topicNavigation" aria-label="Select a topic to navigate">
                             <option value="" selected disabled>Select a Topic</option> 
-                            <option value="climate.html">Climate</option>
-                            <option value="irrigation.html">Irrigation</option>
-                            <option value="pests.html">Pests & Diseases</option>
-                            <option value="nutrients.html">Nutrients</option>
-                            <option value="yield.html">Yield Forecasting</option>
+                            <option id="dropdown-climate" class="dropdown-text" value="climate.html">Climate</option>
+                            <option id="dropdown-irri" class="dropdown-text" value="irrigation.html">Irrigation</option>
+                            <option id="dropdown-pests" class="dropdown-text" value="pests.html">Pests & Diseases</option>
+                            <option id="dropdown-nutients" class="dropdown-text" value="nutrients.html">Nutrients</option>
+                            <option id="dropdown-yield" class="dropdown-text" value="yield.html">Yield Forecasting</option>
                         </select>
                     </div>
                 </ul>
@@ -45,31 +45,30 @@
             <h1>Nutrients</h1>
             <p>
                 In a smart greenhouse systems, the AI can monitor the level of <b>Nitrogen, Phosphorus, Potassium and PH levels of the soil.</b>
-                The Electrical Conductivity<b>(EC)</b> plays a vital role in plant nutrients uptake, it measures how well the soil can conduct electrical current.
-                it provides insight to wether the plant have the right amount of nutrients.
+                The Electrical Conductivity<b>(EC)</b> plays a vital role in plant nutrients uptake, as it measures how well the soil can conduct electrical current.
+                It provides insight into whether the plant has the right amount of nutrients.
                 <br>The higher EC level is an indication of <b>Nutrient Toxicity</b>, and due to the build up of salts from the fetiliser added
-                which can kill the plant roots. The EC is measured in MilliSiemans per centimeter (mS/cm).
+                which can kill the plant roots. The EC is measured in MilliSiemans per entimetre (mS/cm).
                 <br><br>
             </p>
-            <!-- climate section -->
+             <!--climate section -->
             <div class ="climate-container">
-                <!--image section-->
+               <!--image section-->
                 <div class="climate-chart">
                   <img src="utilities/nutrient_image.jpg" alt="Nutrients tracker" id="nutri-page" style="margin-left: 20px; object-fit: cover;">
                   <p>
                     <em>
-                   If the greenhouse soil nutrient sensor has a <b>-5% error</b> in the data its sending or due to error during the data proccessing,
-                   the AI system will show an indication of lower EC level than the actual level and might sugest
-                   to add more fertlizer to increase the nutrients. This action can lead to Nutrient Toxicity.
-                   The use of fertilizer should balanced and well measured during usage to ensure the plants maintain the correct PH and EC levels
-                   for optimal healthy plant growth.
-                </em>
+                        If the greenhouse soil nutrient sensor has a <b>-5% error</b> in the data it's sending or due to an error during the data processing,
+                        the AI system will show an indication of a lower EC level than the actual level and might ssuggest adding more fertlizer to increase the nutrients. This action can lead to Nutrient Toxicity.
+                        The use of fertilizer should be balanced and well measured during usage to ensure the plants maintain the correct PH and EC levels
+                        for optimal healthy plant growth.
+                    </em>
                     <br>
                     <h2 class="sub-heading">Analysis</h2>
                     <p>
-                        The pH value is 4.2 in the condition known as "Error" state. At this level, the plant is no longer able to utilise Nitrogen and phosphorus. 
-                        The plant remains deficient (2.8). When you click the Optimal level button, the system pretends to increase the pH level by adding potassium hydroxide and fresh water to the plant in order to bring the Electrical Current EC back to a safe level. 
-                        <br><br>In order to avoid such errors, it is essential that sensor is calibrated regularly, and an automation system can be implemented that can self-calibrate. Training the AI system on "error" datasets, such as data from failing sensors, 
+                        The pH value is 4.2 in the condition known as the "Error" state. At this level, the plant is no longer able to utilise Nitrogen and phosphorus. 
+                        The plant remains deficient (2.8). When you click the Optimal level button, the system pretends to increase the pH level by adding potassium hydroxide and fresh water to the plant to bring the Electrical Current EC back to a safe level. 
+                        <br><br>In order to avoid such errors, it is essential that the sensor is calibrated regularly, and an automation system can be implemented that can self-calibrate. Training the AI system on "error" datasets, such as data from failing sensors, 
                         so that the model learns to recognise the pattern from faulty sensors.
                     </p>
                   </p>
@@ -115,7 +114,9 @@
             </div>
             <!--Article button-->
             <div>
-                <input type="button" value="Article" id="nuti-article" class="articleBtn">
+                <button type="button" value="Article" id="nuti-article" class="articleBtn" aria-label="external article">
+                 Article
+                </button>
             </div>
         </section>
 

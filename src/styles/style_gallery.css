@@ -11,7 +11,6 @@
     transform: scale(1.30);
     transition: transform 0.4s ease;
 }
-
 .topicsContainer-gallery{
     display: flex;
   flex-wrap: wrap;

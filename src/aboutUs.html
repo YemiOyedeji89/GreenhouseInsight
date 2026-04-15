@@ -24,11 +24,11 @@
                     <div>
                         <select class="topicsBar" id="topicNavigation" aria-label="Select a topic to navigate">
                             <option value="" selected disabled>Select a Topic</option> 
-                            <option value="climate.html">Climate</option>
-                            <option value="irrigation.html">Irrigation</option>
-                            <option value="pests.html">Pests & Diseases</option>
-                            <option value="nutrients.html">Nutrients</option>
-                            <option value="yield.html">Yield Forecasting</option>
+                            <option id="dropdown-climate" class="dropdown-text" value="climate.html">Climate</option>
+                            <option id="dropdown-irri" class="dropdown-text" value="irrigation.html">Irrigation</option>
+                            <option id="dropdown-pests" class="dropdown-text" value="pests.html">Pests & Diseases</option>
+                            <option id="dropdown-nutients" class="dropdown-text" value="nutrients.html">Nutrients</option>
+                            <option id="dropdown-yield" class="dropdown-text" value="yield.html">Yield Forecasting</option>
                         </select>
                     </div>
                 </ul>
@@ -137,9 +137,9 @@
                 </div>
             </form>
         </section>
-        <div class="chatbot-container">
+        <section class="chatbot-container">
             <button id="chat-us-btn" title="chat">Chat with us!</button>
-        </div>
+        </section>
 
         <!-- javascript section -->
         <script src="./script_Pages/script.js"></script>

@@ -23,11 +23,11 @@
                     <div>
                         <select class="topicsBar" id="topicNavigation" aria-label="Select a topic to navigate">
                             <option value="" selected disabled>Select a Topic</option> 
-                            <option value="climate.html">Climate</option>
-                            <option value="irrigation.html">Irrigation</option>
-                            <option value="pests.html">Pests & Diseases</option>
-                            <option value="nutrients.html">Nutrients</option>
-                            <option value="yield.html">Yield Forecasting</option>
+                            <option id="dropdown-climate" class="dropdown-text" value="climate.html">Climate</option>
+                            <option id="dropdown-irri" class="dropdown-text" value="irrigation.html">Irrigation</option>
+                            <option id="dropdown-pests" class="dropdown-text" value="pests.html">Pests & Diseases</option>
+                            <option id="dropdown-nutients" class="dropdown-text" value="nutrients.html">Nutrients</option>
+                            <option id="dropdown-yield" class="dropdown-text" value="yield.html">Yield Forecasting</option>
                         </select>
                     </div>
                 </ul>
@@ -40,20 +40,20 @@
             <h1>Image Gallery</h1>
             <!-- images section -->
             <div class ="topicsContainer-gallery">
-                <div><img src="utilities/climate_monitor.jpg" alt="Climate Monitor" class="topic_images-gallery" id="climat-gallery">
+                <div><a href="climate.html"><img src="utilities/climate_monitor.jpg" alt="Climate Monitor" class="topic_images-gallery" id="climat-gallery"></a>
                     <p>Climate</p>
                 </div>
-                <div><img src="utilities/moisture_image.jpg" alt="Irrigation Monitor" class="topic_images-gallery" id="irr-gallery">
-                <p>Irrigation</p>
+                <div><a href="irrigation.html"><img src="utilities/moisture_image.jpg" alt="Irrigation Monitor" class="topic_images-gallery" id="irr-gallery"></a>
+                    <p>Irrigation</p>
                 </div>
-                <div><img src="utilities/diseases_image2.jpg" alt="infected plants" class="topic_images-gallery" id="pest-gallery">
-                <p>Pests & Diseases</p>
+                <div><a href="pests.html"><img src="utilities/diseases_image2.jpg" alt="infected plants" class="topic_images-gallery" id="pest-gallery"></a>
+                    <p>Pests & Diseases</p>
                 </div>
-                <div><img src="utilities/nutrient_image.jpg" alt="Nutrients tracker" class="topic_images-gallery" id="nutri-gallery">
-                <p>Nutrients</p>
+                <div><a href="nutrients.html"><img src="utilities/nutrient_image.jpg" alt="Nutrients tracker" class="topic_images-gallery" id="nutri-gallery"></a>
+                    <p>Nutrients</p>
                 </div>
-                <div><img src="utilities/yield_forecast_image.jpg" alt="Yield Forecasting dashboard" class="topic_images-gallery" id="yield-gallery">
-                <p>Yield Forecasting</p>
+                <div><a href="yield.html"><img src="utilities/yield_forecast_image.jpg" alt="Yield Forecasting dashboard" class="topic_images-gallery" id="yield-gallery"></a>
+                    <p>Yield Forecasting</p>
                 </div>
             </div>
         </section>

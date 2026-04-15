@@ -62,7 +62,9 @@ async function initClimateChart() {
             display: true,
             text: "Avg Humidity From Good Sensor Vs 5% Error Sensor Data",
             font: {size:16}
-          }
+          },
+          responsive: true,
+          maintainAspectRatio: false,
         },
         scales: {
           x: {

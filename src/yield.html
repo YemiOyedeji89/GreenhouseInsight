@@ -12,7 +12,7 @@
             src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0">
         </script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-        <title>Yield forcasting</title>
+        <title>Yield forecasting</title>
     </head>
     <main>
         <!-- Navigation Bar -->
@@ -29,11 +29,11 @@
                     <div>
                         <select class="topicsBar" id="topicNavigation" aria-label="Select a topic to navigate">
                             <option value="" selected disabled>Select a Topic</option> 
-                            <option value="climate.html">Climate</option>
-                            <option value="irrigation.html">Irrigation</option>
-                            <option value="pests.html">Pests & Diseases</option>
-                            <option value="nutrients.html">Nutrients</option>
-                            <option value="yield.html">Yield Forecasting</option>
+                            <option id="dropdown-climate" class="dropdown-text" value="climate.html">Climate</option>
+                            <option id="dropdown-irri" class="dropdown-text" value="irrigation.html">Irrigation</option>
+                            <option id="dropdown-pests" class="dropdown-text" value="pests.html">Pests & Diseases</option>
+                            <option id="dropdown-nutients" class="dropdown-text" value="nutrients.html">Nutrients</option>
+                            <option id="dropdown-yield" class="dropdown-text" value="yield.html">Yield Forecasting</option>
                         </select>
                     </div>
                 </ul>
@@ -53,14 +53,14 @@
                 <div class="climate-chart">
                     <img src="./utilities/yield_forecast_image.jpg" alt="Yield Forecasting dashboard" class="opic_img" id="yield-gallery">
                 </div>
-                <!--forcasting insight-->
+                <!--forecasting insight-->
                 <div class="climate-chart" id="pie-chart-container">
                     <strong>Forecasting Insight:</strong> 
                     <span id="analysis-text">Loading data...</span>
                     <p>
                         Based on the simulated chart above, Region D appears to be the most productive zone.
-                        The region specific details suggest that Region A may be experiencing a ventilation issue or 
-                        a sensor data error. As a result, its performance might not actually be as poor as the chart inducates.
+                        The region-specific details suggest that Region A may be experiencing a ventilation issue or 
+                        a sensor data error. As a result, its performance might not actually be as poor as the chart indicates.
                     </p>
                 </div>
                 <div class="climate-chart">
@@ -70,7 +70,9 @@
             
             <!--Article button-->
             <div>
-                 <input type="button" value="Article" id="yield-article" class="articleBtn">
+                 <button type="button" value="Article" id="yield-article" class="articleBtn" aria-label="external article">
+                    Article
+                 </button>
             </div>
         </section>
 

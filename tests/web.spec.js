@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { test, expect } from '@playwright/test';
 
 const homePath = `/GreenhouseInsight/src/homePage.html`
@@ -270,11 +269,12 @@ test.describe('Transition Tests', () => {
   //navBar transitions
   test('check navBar link transitions', async ({ page }) => {
     const allNavBarText = await page.locator('.navText').all();
-    const onHoverColour = `rgba(199, 159, 2, 0.56)`
+    const onHoverColour = /rgba?\(199,\s*159,\s*2,\s*0\.56\)/;
     
     for (const navText of allNavBarText){
-      await navText.hover();
-      await expect(navText).toHaveCSS('color', onHoverColour);
+      const link = navText.locator('a');
+      await link.hover();
+      await expect(link).toHaveCSS('background-color', onHoverColour);
     }
   });
 
@@ -290,6 +290,7 @@ test.describe('Transition Tests', () => {
     
     for (const imgG of allImg){
       await imgG.hover();
+      await page.waitForTimeout(1000);
       await expect(imgG).toHaveCSS('transform', `matrix\(1\.3, 0, 0, 1\.3, 0, 0\)`);
     }
   });

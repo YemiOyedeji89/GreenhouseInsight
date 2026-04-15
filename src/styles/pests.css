@@ -6,6 +6,9 @@
 #pest-video{
     margin-left: 60px;
 }
-#pest-pContiner{
+#pest-pContiner p{
     text-align: justify;
+    line-height: 1.6;
+    padding: 20px;
+    margin-left: 20px;
 }

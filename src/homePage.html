@@ -9,7 +9,7 @@
     </head>
     <main>
         <!-- Navigation Bar -->
-        <section class="navBar">
+        <div class="navBar">
              <!-- logo -->
           <img src="utilities/greenhouseLogo.png" alt="Greenhouse Insight Logo" id="greenhouse-logo" class="logo">
             <nav class="nav">
@@ -19,19 +19,19 @@
                     <li class="navText"><a id="about-us" href="aboutUs.html">About Us</a></li>
 
                     <!-- Navigation Bar Topic dropdown -->
-                    <div>
+                    <li>
                         <select class="topicsBar" id="topicNavigation" aria-label="Select a topic to navigate">
                             <option value="" selected disabled>Select a Topic</option> 
-                            <option id="dropdown-climate" value="climate.html">Climate</option>
-                            <option id="dropdown-irri" value="irrigation.html">Irrigation</option>
-                            <option id="dropdown-pests" value="pests.html">Pests & Diseases</option>
-                            <option id="dropdown-nutients" value="nutrients.html">Nutrients</option>
-                            <option id="dropdown-yield" value="yield.html">Yield Forecasting</option>
+                            <option id="dropdown-climate" class="dropdown-text" value="climate.html">Climate</option>
+                            <option id="dropdown-irri" class="dropdown-text" value="irrigation.html">Irrigation</option>
+                            <option id="dropdown-pests" class="dropdown-text" value="pests.html">Pests & Diseases</option>
+                            <option id="dropdown-nutients" class="dropdown-text" value="nutrients.html">Nutrients</option>
+                            <option id="dropdown-yield" class="dropdown-text" value="yield.html">Yield Forecasting</option>
                         </select>
-                    </div>
+                    </li>
                 </ul>
             </nav>
-        </section>
+        </div>
 
        <!-- main content section -->
         <section class="mainContent">
@@ -90,6 +90,7 @@
                                 <div class="home-topic-div"><input id="yield-learn-moreBtn" type="button" value="Learn More" class="learnMoreBtn" data-url="yield.html"></div>
                             </td>
                         </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -147,13 +148,13 @@
                     <strong>⚠️ Disclaimer:</strong> This is a test environment. Please do not use real personal data. 
                     All session data is cleared on exit.
                 </div>
-                <label for="name" class="chat-form-area">Name <span class="word-highlight"> * </span></span></label>
+                <label for="name" class="chat-form-area">Name <span class="word-highlight"> * </span></label>
                 <input type="text" id="name" name="name">
                 <div id="error-alert" class="error-alert-field" hidden="true" style="display: none;"></div>
-                <label for="email" class="chat-form-area">Email <span class="word-highlight"> * </span></span></label>
+                <label for="email" class="chat-form-area">Email <span class="word-highlight"> * </span></label>
                 <input type="email" id="email" name="email">
                 <div id="error-alert-email" class="error-alert-field" hidden="true" style="display: none;"></div>
-                <label for="message" class="chat-form-area">Message <span class="word-highlight"> * </span></span></label>
+                <label for="message" class="chat-form-area">Message <span class="word-highlight"> * </span></label>
                 <textarea id="message" class="chat-form-area" name="message" ></textarea>
                 <div id="error-alert-message" class="error-alert-field" hidden="true" style="display: none;"></div>
                 <button type="submit" id="submit-chat-btn" class="chat-form-areabtn">Submit</button>

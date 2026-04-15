@@ -17,13 +17,13 @@
     border-radius: 8px; 
     border-color: #8DC957;
     padding: 50px;
+    margin-left: 80px;
 }
-
 .profile-msg p {
     text-align: justify;
     color: rgb(16, 16, 16);
     line-height: 1.6;
     padding-right: 30px;
-    margin-right: 30px;
+    margin-right: 80px;
     padding: 0px 50px 20px;
 }
