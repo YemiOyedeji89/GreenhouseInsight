@@ -11,7 +11,7 @@ The Greenhouse Insight platform is a data-driven web solution designed to modern
 
 ## 1. Project Overview
 
-**Greenhouse Insight** aims to transition traditional enclosed growing practices into precision agriculture models. The project focuses on leveraging the "intensive cultivation practice" of greenhouse horticulture, where crops grow in controlled environments. By protecting plants from "adverse weather conditions, pests, and diseases," the platform seeks to "optimise their growing conditions for accelerated growth rates and improved crop quality."
+**Greenhouse Insight** aims to transition traditional enclosed growing practices into precision agriculture models. The project focuses on creating awareness on the importance of having good quality data in greenhouse horticulture artificial intelligence (AI)-powered systems, where crops grow in controlled environments. By protecting plants from "adverse weather conditions, pests, and diseases," the platform seeks to "optimise their growing conditions for accelerated growth rates and improved crop quality."
 
 ### Background: The Role of AI in Agriculture
 
@@ -32,10 +32,10 @@ The core function of the dashboard. This feature allows growers to monitor the e
 * **Light Intensity** (e.g., Solar Radiation)
 
 ### B. Analytical Reports
-By processing sensor data, the platform generates **predictive analysis reports** and **real-time monitoring reports**. These insights directly support "decision-making processes and actions" for the grower.
+By processing sensor data, the platform generates simulates **predictive analysis reports** and **real-time monitoring reports**.
 
 ### C. Comprehensive Grower Resources
-Beyond raw data display, the platform aims to be a hub for managing multiple greenhouse operations:
+Beyond raw data display, the platform aims to inform growers about the importance of clean data when managing multiple greenhouse operations:
 * **Irrigation Management:** Using soil moisture and environmental data to optimize watering.
 * **Pest and Disease Control:** Tracking environmental conditions that may lead to outbreaks.
 * **Nutrient Management:** Long-term data tracking for fertilizer optimization.
