@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Greenhouse Insight: AI-Powered Horticultural Monitoring & Analysis
 
 ### Project Website Homepage
@@ -58,3 +59,7 @@ The implementation files included in this repository allow you to run the projec
 ---
 
 *NOTE: The dataset used by this platform contains simulated but realistic values for educational and research purposes.*
+=======
+# GreenhouseInsight
+This is for a project that tells people why good data is important in smart greenhouse horticulture.
+>>>>>>> 81c497182c6423b751dbca2a7e66d1ad98cf136f
